@@ -28,11 +28,11 @@ interface IModalProps {
   handleAddFood: (food: Omit<IFoodPlate, 'id' | 'available'>) => void;
 }
 
-const ModalAddFood: React.FC<IModalProps> = ({
+const ModalAddFood = ({
   isOpen,
   setIsOpen,
   handleAddFood,
-}) => {
+}: IModalProps) => {
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit = useCallback(

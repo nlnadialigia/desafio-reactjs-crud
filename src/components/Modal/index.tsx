@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import ReactModal from 'react-modal';
 
-interface IFoodPlate {
-  id: number;
-  name: string;
-  image: string;
-  price: string;
-  description: string;
-  available: boolean;
-}
+// interface IFoodPlate {
+//   id: number;
+//   name: string;
+//   image: string;
+//   price: string;
+//   description: string;
+//   available: boolean;
+// }
 
 interface IModalProps {
   children: any;
@@ -17,7 +17,7 @@ interface IModalProps {
   setIsOpen: () => void;
 }
 
-const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
+const Modal = ({ children, isOpen, setIsOpen }: IModalProps) => {
   const [modalStatus, setModalStatus] = useState(isOpen);
 
   useEffect(() => {

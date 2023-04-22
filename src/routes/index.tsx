@@ -1,13 +1,13 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
-
-import { Switch, Route } from 'react-router-dom';
-
 import Dashboard from '../pages/Dashboard';
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={Dashboard} />
-  </Switch>
-);
-
-export default Routes;
+export default function Rotas() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}

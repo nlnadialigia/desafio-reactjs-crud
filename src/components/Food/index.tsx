@@ -20,7 +20,7 @@ interface IProps {
   handleEditFood: (food: IFoodPlate) => void;
 }
 
-const Food: React.FC<IProps> = ({
+const Food = ({
   food,
   handleDelete,
   handleEditFood,
